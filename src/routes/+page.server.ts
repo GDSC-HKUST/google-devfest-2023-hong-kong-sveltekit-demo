@@ -1,4 +1,4 @@
-import prisma from '$lib/prisma.js';
+import prisma from '$lib/server/prisma.js';
 
 export async function load({ locals }) {
 	const user = (await locals.getSession())?.user;
@@ -12,9 +12,7 @@ export const actions = {
 	post: async ({ locals, request }) => {
 		const data = await request.formData();
 		const message = data.get('message');
-		if (!(typeof message === 'string')) {
-			throw new Error('Invalid message');
-		}
+		if (!(typeof message === 'string')) throw new Error('Invalid message');
 		await prisma.comment.create({
 			data: {
 				message,

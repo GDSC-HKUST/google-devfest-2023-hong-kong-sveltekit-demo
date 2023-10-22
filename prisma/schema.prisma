@@ -14,5 +14,5 @@ model Comment {
 
   createdAt DateTime @default(now()) @map("created_at")
 
-  @@map("comment")
+  @@map("comments")
 }

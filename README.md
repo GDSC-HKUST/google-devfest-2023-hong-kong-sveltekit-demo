@@ -1,4 +1,4 @@
-# Google DevFest 2023 Hong Kong Svelte Demo
+# Google DevFest 2023 Hong Kong SvelteKit Demo
 
 ## Environment Setup
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { enhance } from '$app/forms';
 	import { page } from '$app/stores';
 	import { signIn, signOut } from '@auth/sveltekit/client';
 
@@ -13,7 +14,7 @@
 	<button on:click={() => signIn('google')}>Sign In</button>
 {/if}
 
-<form action="?/post" method="POST">
+<form action="?/post" method="POST" use:enhance>
 	Comment:
 	<input type="text" name="message" />
 	<button type="submit">Submit</button>
