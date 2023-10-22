@@ -22,6 +22,6 @@
 
 <ul>
 	{#each form?.comments || data.comments as comment}
-		<li>{comment.sender}: {comment.message}</li>
+		<li>{comment.sender} at {comment.createdAt.toLocaleString()}: {comment.message}</li>
 	{/each}
 </ul>
