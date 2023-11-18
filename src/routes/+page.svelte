@@ -12,13 +12,13 @@
 		Signed in as {$page.data.session.user.name} ({$page.data.session.user.email})
 		<button
 			on:click={() => signOut()}
-			class="w-full md:w-auto justify-center flex cursor-pointer items-center rounded-md border-2 border-black bg-google-yellow px-10 py-3 font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none"
+			class="w-full md:w-auto justify-center flex cursor-pointer items-center rounded-full border-2 border-black bg-google-yellow px-10 py-3 font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none"
 			>Sign Out</button
 		>
 	{:else}
 		<button
 			on:click={() => signIn('google')}
-			class="w-full md:w-auto justify-center flex cursor-pointer items-center rounded-md border-2 border-black bg-google-yellow px-10 py-3 font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none"
+			class="w-full md:w-auto justify-center flex cursor-pointer items-center rounded-full border-2 border-black bg-google-yellow px-10 py-3 font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none"
 			>Sign In</button
 		>
 	{/if}
@@ -36,11 +36,11 @@
 			id="message"
 			type="text"
 			name="message"
-			class=" w-full rounded-md border-2 border-black p-[10px] font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] outline-none transition-all focus:translate-x-[3px] focus:translate-y-[3px] focus:shadow-none"
+			class=" w-full rounded-full border-2 border-black py-[10px] px-4 font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] outline-none transition-all focus:translate-x-[3px] focus:translate-y-[3px] focus:shadow-none"
 		/>
 		<button
 			type="submit"
-			class="mt-2 md:mt-0 w-full md:w-auto justify-center flex cursor-pointer items-center rounded-md border-2 border-black bg-google-yellow px-10 py-3 font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none"
+			class="mt-2 md:mt-0 w-full md:w-auto justify-center flex cursor-pointer items-center rounded-full border-2 border-black bg-google-yellow px-10 py-3 font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none"
 			>Submit</button
 		>
 	</div>
