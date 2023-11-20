@@ -7,9 +7,9 @@
 	export let form;
 </script>
 
-<div class="flex justify-center">
+<div class="md:flex justify-center space-y-4 md:space-y-0 md:gap-4 items-center">
 	{#if $page.data.session?.user}
-		Signed in as {$page.data.session.user.name} ({$page.data.session.user.email})
+		<p>Signed in as {$page.data.session.user.name} ({$page.data.session.user.email})</p>
 		<button
 			on:click={() => signOut()}
 			class="w-full md:w-auto justify-center flex cursor-pointer items-center rounded-full border-2 border-black bg-google-yellow px-10 py-3 font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none"
